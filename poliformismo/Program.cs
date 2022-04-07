@@ -9,6 +9,8 @@ namespace poliformismo
 
             Cliente person = new Cliente();
             person.getData();
+
+
         }
 
     }
@@ -66,12 +68,15 @@ namespace poliformismo
 
     public class Banca
     {
+        public static int conti;
         public Conto[] _conto { get; set; }
 
 
         public void AddConto()
         {
             _conto[0] = new Conto(this);
+            conti++;
+
         }
     }
 
